@@ -5,12 +5,12 @@
     <Platform Condition=" '$(Platform)' == '' ">iPhoneSimulator</Platform>
     <ProductVersion>8.0.30703</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{9FAA0328-C6AD-42E5-971B-368C0A1BD8C6}</ProjectGuid>
+    <ProjectGuid>{AED04D18-8D55-47B2-AD93-A4D9856E30F4}</ProjectGuid>
     <ProjectTypeGuids>{6BC8ED88-2882-458C-8E55-DFD12B67127B};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
-    <RootNamespace>Cheesebaron.MvxPlugins.ModernHttpClient.Touch</RootNamespace>
+    <RootNamespace>Cheesebaron.MvxPlugins.XamarinInsights.Touch</RootNamespace>
     <IPhoneResourcePrefix>Resources</IPhoneResourcePrefix>
-    <AssemblyName>Cheesebaron.MvxPlugins.ModernHttpClient.Touch</AssemblyName>
+    <AssemblyName>Cheesebaron.MvxPlugins.XamarinInsights.Touch</AssemblyName>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -34,14 +34,13 @@
     <CodesignKey>iPhone Developer</CodesignKey>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="HttpClientFactory.cs" />
     <Compile Include="Plugin.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Core\ModernHttpClient.Core.csproj">
-      <Project>{fa15c468-bf0b-4197-9602-3b49dcb53699}</Project>
-      <Name>ModernHttpClient.Core</Name>
+    <ProjectReference Include="..\Core\Cheesebaron.MvxPlugins.XamarinInsights.csproj">
+      <Project>{101dda9d-e3e0-49c0-a75f-2a2950699ff2}</Project>
+      <Name>Cheesebaron.MvxPlugins.XamarinInsights</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
@@ -49,23 +48,32 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\submodules\MvvmCross-Binaries\VS2012\bin\Debug\Mvx\Touch\Cirrious.CrossCore.dll</HintPath>
     </Reference>
-    <Reference Include="ModernHttpClient.iOS, Version=1.2.0.0, Culture=neutral, processorArchitecture=MSIL">
+    <Reference Include="Cirrious.CrossCore.Touch, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\vendor\MonoTouch\ModernHttpClient.iOS.dll</HintPath>
+      <HintPath>..\..\submodules\MvvmCross-Binaries\VS2012\bin\Debug\Mvx\Touch\Cirrious.CrossCore.Touch.dll</HintPath>
+    </Reference>
+    <Reference Include="Cirrious.MvvmCross, Version=1.0.0.0, Culture=neutral, PublicKeyToken=e16445fd9b451819, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\submodules\MvvmCross-Binaries\VS2012\bin\Debug\Mvx\Touch\Cirrious.MvvmCross.dll</HintPath>
+    </Reference>
+    <Reference Include="Cirrious.MvvmCross.Touch, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\submodules\MvvmCross-Binaries\VS2012\bin\Debug\Mvx\Touch\Cirrious.MvvmCross.Touch.dll</HintPath>
+    </Reference>
+    <Reference Include="PLCrashReporter">
+      <HintPath>..\..\packages\Xamarin.Insights.1.6.0\lib\MonoTouch10\PLCrashReporter.dll</HintPath>
     </Reference>
     <Reference Include="System" />
-    <Reference Include="monotouch" />
+    <Reference Include="System.Xml" />
     <Reference Include="System.Core" />
-    <Reference Include="System.Net.Http" />
+    <Reference Include="monotouch" />
+    <Reference Include="Xamarin.Insights, Version=1.1.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\packages\Xamarin.Insights.1.6.0\lib\MonoTouch10\Xamarin.Insights.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
-    <None Include="app.config" />
     <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.MonoTouch.CSharp.targets" />
-  <Import Project="..\..\packages\Microsoft.Bcl.Build.1.0.13\tools\Microsoft.Bcl.Build.targets" Condition="Exists('..\..\packages\Microsoft.Bcl.Build.1.0.13\tools\Microsoft.Bcl.Build.targets')" />
-  <Target Name="EnsureBclBuildImported" BeforeTargets="BeforeBuild" Condition="'$(BclBuildImported)' == ''">
-    <Error Condition="!Exists('..\..\packages\Microsoft.Bcl.Build.1.0.13\tools\Microsoft.Bcl.Build.targets')" Text="This project references NuGet package(s) that are missing on this computer. Enable NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=317567." HelpKeyword="BCLBUILD2001" />
-    <Error Condition="Exists('..\..\packages\Microsoft.Bcl.Build.1.0.13\tools\Microsoft.Bcl.Build.targets')" Text="The build restored NuGet packages. Build the project again to include these packages in the build. For more information, see http://go.microsoft.com/fwlink/?LinkID=317568." HelpKeyword="BCLBUILD2002" />
-  </Target>
 </Project>

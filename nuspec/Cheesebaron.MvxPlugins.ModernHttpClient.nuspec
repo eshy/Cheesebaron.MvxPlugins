@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
+    <metadata>
+        <id>Cheesebaron.MvxPlugins.ModernHttpClient</id>
+        <version>2.0.0</version>
+        <title>Cheesebaron.MvxPlugins.ModernHttpClient</title>
+		<authors>Tomasz Cielecki</authors>
+		<owners>Tomasz Cielecki</owners>
+        <projectUrl>https://github.com/Cheesebaron/Cheesebaron.MvxPlugins</projectUrl>
+        <requireLicenseAcceptance>false</requireLicenseAcceptance>
+        <description>a NuGet package for the MvvmCross ModernHttpClient plugin (A wrapper around Paul Betts' ModernHttpClient)</description>
+        <tags>MvvmCross ModernHttpClient</tags>
+        <dependencies>
+            <group>
+                <dependency id="MvvmCross.HotTuna.CrossCore" version="3.2.1" />
+                <dependency id="Microsoft.Net.Http" version="2.2.22" />
+            </group>
+            <group targetFramework="MonoAndroid0.0">
+                <dependency id="ModernHttpClient" version="2.1.2" />
+            </group>
+            <group targetFramework="MonoTouch0.0">
+                <dependency id="ModernHttpClient" version="2.1.2" />
+            </group>
+        </dependencies>
+    </metadata>
+    <files>
+		<!-- PCL -->
+		<file src="..\bin\Release\Portable\Cheesebaron.MvxPlugins.ModernHttpClient.dll" target="lib\portable-net45+netcore45+wpa81+wp8+MonoAndroid1+MonoTouch1\Cheesebaron.MvxPlugins.ModernHttpClient.dll" />
+
+		<!-- phone -->
+        <file src="..\bin\Release\Portable\Cheesebaron.MvxPlugins.ModernHttpClient.dll" target="lib\windowsphone8\Cheesebaron.MvxPlugins.ModernHttpClient.dll" />
+        <file src="BootstrapContent\ModernHttpClientPluginBootstrap.cs.pp" target="content\wp8\Bootstrap\ModernHttpClientPluginBootstrap.cs.pp" />
+
+		<!-- store -->
+        <file src="..\bin\Release\Portable\Cheesebaron.MvxPlugins.ModernHttpClient.dll" target="lib\netcore45\Cheesebaron.MvxPlugins.ModernHttpClient.dll" />
+        <file src="BootstrapContent\ModernHttpClientPluginBootstrap.cs.pp" target="content\netcore45\Bootstrap\ModernHttpClientPluginBootstrap.cs.pp" />
+
+		<!-- droid -->
+		<file src="..\bin\Release\Portable\Cheesebaron.MvxPlugins.ModernHttpClient.dll" target="lib\MonoAndroid16\Cheesebaron.MvxPlugins.ModernHttpClient.dll" />
+        <file src="BootstrapContent\ModernHttpClientPluginBootstrap.cs.pp" target="content\MonoAndroid16\Bootstrap\ModernHttpClientPluginBootstrap.cs.pp" />
+
+		<!-- touch -->
+        <file src="..\bin\Release\Portable\Cheesebaron.MvxPlugins.ModernHttpClient.dll" target="lib\MonoTouch40\Cheesebaron.MvxPlugins.ModernHttpClient.dll" />
+        <file src="TouchBootstrapContent\ModernHttpClientPluginBootstrap.cs.pp" target="content\MonoTouch40\Bootstrap\ModernHttpClientPluginBootstrap.cs.pp" />
+
+    </files>
+</package>

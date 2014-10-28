@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
     <metadata>
         <id>Cheesebaron.MvxPlugins.ModernHttpClient</id>
-        <version>2.0.0</version>
+        <version>2.0.1</version>
         <title>Cheesebaron.MvxPlugins.ModernHttpClient</title>
 		<authors>Tomasz Cielecki</authors>
 		<owners>Tomasz Cielecki</owners>
@@ -36,12 +36,12 @@
         <file src="BootstrapContent\ModernHttpClientPluginBootstrap.cs.pp" target="content\netcore45\Bootstrap\ModernHttpClientPluginBootstrap.cs.pp" />
 
 		<!-- droid -->
-		<file src="..\bin\Release\Portable\Cheesebaron.MvxPlugins.ModernHttpClient.dll" target="lib\MonoAndroid16\Cheesebaron.MvxPlugins.ModernHttpClient.dll" />
-        <file src="BootstrapContent\ModernHttpClientPluginBootstrap.cs.pp" target="content\MonoAndroid16\Bootstrap\ModernHttpClientPluginBootstrap.cs.pp" />
+		<file src="..\bin\Release\Portable\Cheesebaron.MvxPlugins.ModernHttpClient.dll" target="lib\MonoAndroid\Cheesebaron.MvxPlugins.ModernHttpClient.dll" />
+        <file src="BootstrapContent\ModernHttpClientPluginBootstrap.cs.pp" target="content\MonoAndroid\Bootstrap\ModernHttpClientPluginBootstrap.cs.pp" />
 
 		<!-- touch -->
-        <file src="..\bin\Release\Portable\Cheesebaron.MvxPlugins.ModernHttpClient.dll" target="lib\MonoTouch40\Cheesebaron.MvxPlugins.ModernHttpClient.dll" />
-        <file src="TouchBootstrapContent\ModernHttpClientPluginBootstrap.cs.pp" target="content\MonoTouch40\Bootstrap\ModernHttpClientPluginBootstrap.cs.pp" />
+        <file src="..\bin\Release\Portable\Cheesebaron.MvxPlugins.ModernHttpClient.dll" target="lib\MonoTouch\Cheesebaron.MvxPlugins.ModernHttpClient.dll" />
+        <file src="TouchBootstrapContent\ModernHttpClientPluginBootstrap.cs.pp" target="content\MonoTouch\Bootstrap\ModernHttpClientPluginBootstrap.cs.pp" />
 
     </files>
 </package>
